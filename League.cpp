@@ -19,6 +19,11 @@ League::League(vector<Team>& teams) {
     }
 }
 
+// Return current teams vector
+vector<Team> &League::getTeams() const {
+    return _teams;
+}
+
 // Function creates a random float number in range [min, max].
 // Returns the random number.
 double League::floatRand(int min, int max)
