@@ -5,6 +5,7 @@ b_ball::Game::Game(Team& indoor, Team& outdoor) : _indoor(indoor), _outdoor(outd
 {}
 
 void Game::roll_game_result() {
+    srand(time(nullptr)); /*Make a random generator*/
     const int base_result_min = 50; const int base_result_max = 101;
     const int indoor_result_min = 55; const int indoor_result_max = 101;
 
