@@ -12,5 +12,6 @@ namespace b_ball{
     public:
         Game(Team& indoor, Team& outdoor);
         void roll_game_result();
+        Team& winner();
     };
 }

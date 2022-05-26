@@ -23,3 +23,12 @@ void Game::roll_game_result() {
     }
     _outdoor_points+=BONUS_POINTS;
 }
+
+// Returns the winner of the current game,
+// if the matched has ended. Otherwise, it throws an exception.
+Team& Game::winner() {
+    if (_indoor_points == 0 || _outdoor_points == 0){
+        throw invalid_argument("Game is still running!");
+    }
+    return _indoor_points > _outdoor_points ? _indoor : _outdoor;
+}
