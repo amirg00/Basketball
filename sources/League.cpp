@@ -35,7 +35,9 @@ double League::floatRand(int min, int max)
 Team League::getRandTeam() {
     string charsSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string randTeamName;
-    int randLen = 1 + (rand() % 5);
+    const int maxCharsNumAddition = 3; const int minCharsNum = 3;
+
+    int randLen = minCharsNum + (rand() % maxCharsNumAddition);
     for (unsigned long j = 0; j < randLen; ++j) {
         unsigned long randPos = (unsigned long)(rand()) % charsSet.length();
         randTeamName += charsSet[(unsigned long)randPos];
