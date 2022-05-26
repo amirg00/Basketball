@@ -34,3 +34,23 @@ b_ball::Schedule::Schedule(League &league) {
         teams[1] = tmpTeam;
     }
 }
+
+// Method runs a whole new season, when a season
+// has two cycles - in each, every team will play against any other team.
+// After running this method, we will be able to show the points table,
+// sorted by two parameters: win/loss relation and points difference.
+void Schedule::run_season() {
+    // Run first cycle
+    for (vector<Game>& round : _first_cycle){
+        for (Game& game : round){
+             game.roll_game_result();
+        }
+    }
+
+    // Run second cycle
+    for (vector<Game>& round : _second_cycle){
+        for (Game& game : round){
+            game.roll_game_result();
+        }
+    }
+}

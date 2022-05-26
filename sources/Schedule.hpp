@@ -16,5 +16,6 @@ namespace b_ball{
         vector<vector<Game>> _first_cycle, _second_cycle;
     public:
         explicit Schedule(League& league);
+        void run_season();
     };
 }
