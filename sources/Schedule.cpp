@@ -5,7 +5,7 @@ using namespace b_ball;
 using std::cout; using std::endl;
 
 
-b_ball::Schedule::Schedule(League &league) {
+b_ball::Schedule::Schedule(League &league) : _end_season(false) {
     size_t rounds = LEAGUE_TEAMS_AMOUNT - 1;
     vector<Team>& teams = league.getTeams();
 
@@ -53,4 +53,9 @@ void Schedule::run_season() {
             game.roll_game_result();
         }
     }
+    _end_season = true;
+}
+
+bool Schedule::end_season() {
+    return _end_season;
 }

@@ -14,8 +14,10 @@ namespace b_ball{
     class Schedule {
     private:
         vector<vector<Game>> _first_cycle, _second_cycle;
+        bool _end_season;                                       /*Flag: indicates if this is the end of the season.*/
     public:
         explicit Schedule(League& league);
         void run_season();
+        bool end_season();
     };
 }
