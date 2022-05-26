@@ -13,5 +13,7 @@ private:
     double _skill_rate;
 public:
     Team(string& name, double skill_rate);
+    string name() const;
+    double skill() const;
 };
 

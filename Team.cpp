@@ -7,3 +7,13 @@ Team::Team(string &name, double skill_rate) : _name(name), _skill_rate(skill_rat
         throw invalid_argument("ERR: skill is a real number defined in following scope: [0, 1].");
     }
 }
+
+// Returns team's name
+string Team::name() const {
+    return _name;
+}
+
+// Returns team's skill
+double Team::skill() const {
+    return _skill_rate;
+}
