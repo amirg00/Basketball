@@ -16,5 +16,6 @@ private:
 public:
     League();
     Leauge(vector<Team>& teams);
+    vector<Team>& getTeams() const;
 };
 

@@ -1,7 +1,7 @@
 #include "League.hpp"
 
 
-Leauge::League() {
+League::League() {
     srand(time(nullptr)); /* Make a random generator - FOR UNIQUE NAMES*/
     for (int i = 0; i < LEAGUE_TEAMS_AMOUNT; ++i) {
         Team randTeam = getRandTeam();
@@ -39,3 +39,4 @@ static Team League::getRandTeam() {
     Team randTeam{randTeamName, randSkill};
     return randTeam;
 }
+
