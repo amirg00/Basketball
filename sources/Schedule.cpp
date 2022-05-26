@@ -56,6 +56,6 @@ void Schedule::run_season() {
     _end_season = true;
 }
 
-bool Schedule::end_season() {
+bool Schedule::end_season() const{
     return _end_season;
 }

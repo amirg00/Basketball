@@ -18,6 +18,6 @@ namespace b_ball{
     public:
         explicit Schedule(League& league);
         void run_season();
-        bool end_season();
+        bool end_season() const;
     };
 }
