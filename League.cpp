@@ -1,7 +1,7 @@
 #include "League.hpp"
 
 
-League::League() {
+b_ball::League::League() {
     srand(time(nullptr)); /* Make a random generator - FOR UNIQUE NAMES*/
     for (int i = 0; i < LEAGUE_TEAMS_AMOUNT; ++i) {
         Team randTeam = getRandTeam();
@@ -9,7 +9,7 @@ League::League() {
     }
 }
 
-League::League(vector<Team>& teams) {
+b_ball::League::League(vector<Team>& teams) {
     if (teams.size() != LEAGUE_TEAMS_AMOUNT) {
         throw invalid_argument("ERR: teams amount for season is 20!");
     }
@@ -20,19 +20,19 @@ League::League(vector<Team>& teams) {
 }
 
 // Return current teams vector
-vector<Team> &League::getTeams() const {
+vector<Team>& b_ball::League::getTeams() const {
     return _teams;
 }
 
 // Function creates a random float number in range [min, max].
 // Returns the random number.
-double League::floatRand(int min, int max)
+double b_ball::League::floatRand(int min, int max)
 {
     double randFloat = (double)rand() / RAND_MAX;
     return min + randFloat * (max - min);
 }
 
-static Team League::getRandTeam() {
+static Team b_ball::League::getRandTeam() {
     string charsSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string randTeamName;
     int randLen = 1 + (rand() % 5);

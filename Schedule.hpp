@@ -10,10 +10,11 @@
     GOAL: Need to match the groups, such that in the end of the cycle,
           each group had a game with every other group.
  */
-
-class Schedule {
-private:
-    vector<vector<Game>> _first_cycle, _second_cycle;
-public:
-    explicit Schedule(League& league);
-};
+namespace b_ball{
+    class Schedule {
+    private:
+        vector<vector<Game>> _first_cycle, _second_cycle;
+    public:
+        explicit Schedule(League& league);
+    };
+}

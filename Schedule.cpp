@@ -3,7 +3,7 @@
 using std::cout; using std::endl;
 
 
-Schedule::Schedule(League &league) {
+b_ball::Schedule::Schedule(League &league) {
     size_t rounds = LEAGUE_TEAMS_AMOUNT/2;
     vector<Team>& teams = league.getTeams();
 
