@@ -14,7 +14,7 @@ private:
     static string getRandTeam();
     static double floatRand(int min, int max);
 public:
-    League() = default;
+    League();
     Leauge(vector<Team>& teams);
 };
 
