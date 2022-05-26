@@ -1,5 +1,5 @@
 #include "League.hpp"
-
+using namespace b_ball;
 
 b_ball::League::League() {
     srand(time(nullptr)); /* Make a random generator - FOR UNIQUE NAMES*/

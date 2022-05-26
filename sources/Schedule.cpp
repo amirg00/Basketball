@@ -1,5 +1,7 @@
 #include "Schedule.hpp"
 #include "iostream"
+
+using namespace b_ball;
 using std::cout; using std::endl;
 
 
