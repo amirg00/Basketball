@@ -19,5 +19,6 @@ namespace b_ball{
         explicit Schedule(League& league);
         void run_season();
         bool end_season() const;
+        void print_points_table() const;
     };
 }

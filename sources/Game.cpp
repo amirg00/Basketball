@@ -17,7 +17,7 @@ void Game::roll_game_result() {
 
     // Second Roll: give 10 points bonus for the team
     // to have a bigger skill rate.
-    if(_indoor._skill_rate > _outdoor._skill_rate){
+    if(_indoor.skill() > _outdoor.skill()){
         _indoor_points+=BONUS_POINTS;
         return;
     }

@@ -59,3 +59,8 @@ void Schedule::run_season() {
 bool Schedule::end_season() const{
     return _end_season;
 }
+
+// Prints the table points in the end of the season.
+void Schedule::print_points_table() const {
+
+}
